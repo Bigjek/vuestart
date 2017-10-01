@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="" id="" v-on:input="changeTitle">
+        <h1>{{title}}</h1>
+        <a v-bind:href="link">link</a>
+        <h1 v-html="linkTag"></h1>
+        <div class="wrap" v-on:mousemove="checkCoords">
+            x:{{coords.x}} , y:{{coords.y}}
+        </div>
+        <a href="http://yandex.ru" @click.prevent="handleClick('Новый', $event)" >
+            текст ссылки {{anotherTitle}} : было кликнуто в {{anotherX}}
+        </a>
+    </div>
+    <script src="./main.js"></script>    
+</body>
+</html>
